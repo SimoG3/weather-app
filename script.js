@@ -8,9 +8,15 @@ async function getWeather(query) {
     try {
     const response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${encodeURIComponent(query)}?key=2PAFL2H3LXD8B4X42HJEXYLYV`, { mode: 'cors'});
     const locationWeather = await response.json();
-    const weather = locationWeather.description;
 
-    return weather;
+    const adress = locationWeather.address;
+    const description = locationWeather.description;
+    const condition = locationWeather.days[0].conditions;
+    const tempF = locationWeather.days[0].temp;
+
+    const tempC = ((tempF -32) * 5/9 ).toFixed(2);
+    
+    return [adress, condition, description, tempC];
 
     } catch(error) {
         console.log(error);
@@ -22,7 +28,16 @@ async function getWeather(query) {
 
 async function displayWeather(location) {
     const weather = await getWeather(location);
-    weatherResult.innerText = weather;
+
+    weatherResult.innerHTML = `
+        <h1>Weather in ${weather[0]}</h1>
+        <br>
+        <h2>Condition : ${weather[1]}</h2>
+        <br>
+        <h2>Description : ${weather[2]}</h2>
+        <br>
+        <h2>Temperature : ${ weather[3]}</h2>
+    `;
 }
 
 

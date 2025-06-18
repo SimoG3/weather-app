@@ -1,0 +1,144 @@
+/* RESET */
+/* ===== Modern CSS Reset ===== */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+  }
+  
+  html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeSpeed;
+  }
+  
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  input, button, textarea, select {
+    font: inherit;
+    color: inherit;
+    background: none;
+    border: none;
+    outline: none;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  ul, ol {
+    list-style: none;
+  }
+  
+  button {
+    cursor: pointer;
+  }
+  
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+/* CSS */
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(to bottom right, #d0e9ff, #89c4f4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+  }
+  
+  .card {
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    padding: 40px 30px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+  }
+  
+  .title {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #2c3e50;
+    font-weight: 600;
+  }
+  
+  .input {
+    width: 100%;
+    padding: 14px 16px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+  }
+  
+  .input:focus {
+    border-color: #3498db;
+  }
+  
+  .button {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: #2980b9;
+  }
+  
+  .weather {
+    margin-top: 30px;
+    text-align: left;
+  }
+  
+  .weather h2 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    color: #34495e;
+    font-weight: 500;
+  }
+  
+  .temp {
+    font-size: 48px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin: 10px 0;
+  }
+  
+  .desc {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: #555;
+  }
+  
+
